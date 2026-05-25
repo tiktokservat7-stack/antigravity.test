@@ -4,45 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Roblox Games | Boutique de jeux</title>
+  <title>Live Server | Tableau de Bord</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="store-container">
-
-    <!-- En-tête avec panier -->
+  <div class="dashboard-container">
+    <!-- En-tête -->
     <header class="header">
       <div class="logo-area">
-        <div class="roblox-icon">R</div>
-        <span class="logo-text">Roblox Games</span>
+        <div class="roblox-icon">🌐</div>
+        <span class="logo-text">Live Server Status</span>
       </div>
-      <div class="cart-panel">
-        <div class="cart-icon-wrapper" id="cart-toggle">
-          <span class="cart-emoji">🛒</span>
-          <span id="cart-count">0</span>
-          <span class="cart-total" id="cart-total-display">0 Robux</span>
-        </div>
+      <div class="server-status">
+        <div class="status-indicator" id="server-status-dot"></div>
+        <span id="player-count">Serveur Hors Ligne</span>
       </div>
     </header>
 
-    <!-- Grille de jeux -->
-    <div class="games-grid" id="gamesContainer">
-      <!-- Les jeux seront générés dynamiquement en JS -->
+    <!-- Grille de joueurs -->
+    <div class="players-grid" id="playersContainer">
+      <!-- Les joueurs seront générés dynamiquement en JS -->
     </div>
 
-    <!-- Section panier détaillé -->
-    <div class="cart-details" id="cartDetailSection">
-      <div class="cart-title">
-        <span>🧾 Votre panier</span>
-      </div>
-      <ul id="cart-items-list">
-        <li class="empty-cart-message">Votre panier est vide pour le moment.</li>
-      </ul>
-      <div class="cart-summary">
-        <button class="clear-cart-btn" id="clearCartBtn">🗑️ Vider le panier</button>
-        <button class="checkout-btn" id="checkoutBtn">💳 Payer <span id="checkout-total">0</span> Robux</button>
-      </div>
+    <div class="loading-state" id="loadingState">
+      En attente de connexion avec Roblox Studio...
     </div>
   </div>
 
